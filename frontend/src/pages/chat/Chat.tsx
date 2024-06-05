@@ -735,6 +735,15 @@ const Chat = () => {
 
   return (
     <div className={styles.container} role="main">
+      <div className="dropdown-container">
+          <label htmlFor="dropdown">Select an option:</label>
+          <select id="dropdown" value={selectedOption} onChange={handleDropdownChange}>
+              <option value="">--Choose an option--</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+          </select>
+      </div>
       {showAuthMessage ? (
         <Stack className={styles.chatEmptyState}>
           <ShieldLockRegular
